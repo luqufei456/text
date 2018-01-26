@@ -1,0 +1,18 @@
+name = input("请输入姓名：")
+age = input("请输入年龄：")
+gender = input("请输入性别：")
+high = input("请输入身高（厘米）：")
+degree = input("请输入学位：")
+telephone = input("请输入联系方式：")
+address = input("请输入家庭住址：")
+print("="*40)
+print("姓名：" + name +"           年龄：" + age)
+print("性别：%s           身高：%s" % (gender,high))
+print("学位：%s           联系方式：%s" % (degree,telephone))
+print("家庭住址：%s" % address)
+print("="*40)
+age1 = int(age)
+if age1 != 30 or age1 >30:
+    print("不符合要求")
+else:
+    print("符合要求")

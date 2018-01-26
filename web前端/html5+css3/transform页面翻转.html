@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片翻面</title>
+	<style type="text/css">
+		.con{
+			width: 300px;
+			height: 272px;
+			margin: 100px auto 0;
+			position: relative;
+			transform: perspective(800px) rotateY(0deg);
+			transform-style: preserve-3d;
+		}
+		.pic,.info{
+			width: 300px;
+			height: 272px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			backface-visibility: hidden;
+			/* pic初始不转 设置不显示背面  */
+			transform: perspective(800px) rotateY(0deg);
+			transition: all 1s ease;
+		}
+		.info{
+			background-color: gold;
+			text-align: center;
+			line-height: 272px;
+			/* info初始翻转180度 */
+			transform: translateZ(2px) rotateY(180deg);
+		}
+		.con:hover .pic{
+			/* 摸上去 翻转180度 然后不显示 */
+			transform: perspective(800px) rotateY(180deg);
+		}
+		.con:hover .info{
+			/* 摸上去 翻转回来从不显示变为显示 */
+			transform: perspective(800px) rotateY(0deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="pic"><img src="images/location_bg.jpg"></div>
+		<div class="info">图片文字说明</div>
+
+	</div>
+</body>
+</html>

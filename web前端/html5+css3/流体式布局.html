@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>流体布局</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		.menu{
+			height: 50px;
+		}
+		.menu li{
+			/* 给盒子加边框后第一种解决方法
+			宽度超过问题 
+			必须加空格 calc
+			width: calc(25% - 4px);*/
+			width: 25%;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+			float: left;
+			background-color: gold;
+			border: 2px solid #000;
+			/* 第二种解决方法 置盒子的尺寸计算方式为从边框开始，盒子的尺寸，边框和内填充算在盒子尺寸内
+			默认是content-box */
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<ul class="menu">
+		<li><a href="">菜单元素</a></li>
+		<li><a href="">菜单元素</a></li>
+		<li><a href="">菜单元素</a></li>
+		<li><a href="">菜单元素</a></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<!-- get提交 在地址栏后面显示
+username=yiran&
+pwd=123456&
+gender=1&
+like=游戏&
+like=动漫&
+info=hello&
+site=2
+可以看到 最后得到的是
+name=value
+for id 可以使其点到for上面激活id
+-->
+<!--post提交 通过http协议
+不会显示在地址栏里
+而是在http报文中显示
+默认是get方式提交
+-->
+<body>
+	<h3>用户注册</h3>
+	<!-- action是输入的信息发送到哪里-->
+	<form action="http://www.itcast.cn" method="post">
+		<div>
+			<label for="username">用户名:</label>
+			<input type="text" name="username" id="username" value="请输入用户名">
+		</div>
+		<br />
+		<div>
+			<label for="pwd">密&nbsp码:</label>
+			<input type="password" name="pwd" id="pwd">
+		</div>
+		<br />
+		<div>
+			<label>性&nbsp别:</label>
+			<input type="radio" name="gender" id="male" value="1"><label for="male">男</label>
+			<input type="radio" name="gender" id="female" value="0"><label for="female">女</label>
+		</div>
+		<br />
+		<div>
+			<label>爱&nbsp好:</label>
+			<input type="checkbox" name="like" value="游戏">游戏
+			<input type="checkbox" name="like" value="动漫">动漫
+			<input type="checkbox" name="like" value="音乐">音乐
+		</div>
+		<br />
+		<div>
+			<label>照&nbsp片:</label>
+			<input type="file" name="">
+		</div>
+		<br />
+		<div>
+			<label>自&nbsp述:</label>
+			<textarea name="info"></textarea>
+		</div>
+		<br />
+		<div>
+			<label>籍&nbsp贯:</label>
+			<select name="site">
+				<option value="0">请选择地区</option>
+				<option value="1">北京</option>
+				<option value="2">上海</option>
+				<option value="3">深圳</option>
+				<option value="4">广州</option>
+			</select>
+		</div>
+		<br />
+		<!--hidden帮助存值 不在页面上显示-->
+		<input type="hidden" name="hid" value="10000">
+		<input type="submit" name="" value="提交">
+		<input type="reset" name="" value="重置">
+		<input type="button" name="" value="按钮">
+		<!--<input type="image" name="" src="images/002.png"> 用图片做提交按钮-->
+	</form>
+</body>
+</html>

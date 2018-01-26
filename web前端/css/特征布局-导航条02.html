@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航条02</title>
+	<style type="text/css">
+		.menu{
+			list-style: none;
+			background-color: #55a8ea;
+			padding: 0;
+			width: 960px;
+			height: 40px;
+			margin: 50px auto 0;
+			position: relative;
+		}
+		.menu li{
+			/*浮动*/
+			float: left;
+			width: 100px;
+			height: 40px;
+			/* 这里li是 a的父级元素*/
+			text-align: center;
+			line-height: 40px;
+		}
+		.menu li a{
+			/*font-size: 14px;
+			font-family: 'Microsoft Yahei';*/
+			color: #fff;
+			font: 14px/40px 'Microsoft Yahei';
+			text-decoration: none;
+		}
+		.menu li:hover{
+			background-color: #00619f;
+		}
+		.menu .active{
+			background-color: #00619f;
+		}
+		.menu .new{
+			/* 背景图 定位*/
+			width: 33px;
+			height: 20px;
+			background: url(images/new.png) no-repeat;
+			position: absolute;
+			left: 433px;
+			top: -9px;
+		}
+		.menu .new:hover{
+			/* hover的时候用背景图 而不是给背景色 覆盖上面的hover*/
+			background: url(images/new.png) no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<ul class="menu">
+		<li class="active"><a href="">首 页</a></li>
+		<li><a href="">网站建设</a></li>
+		<li><a href="">程序开发</a></li>
+		<li><a href="">网络营销</a></li>
+		<li><a href="">企业VI</a></li>
+		<li><a href="">案例展示</a></li>
+		<li><a href="">联系我们</a></li>
+		<!-- 装饰图标用背景做 内容图片用插入做-->
+		<li class="new"></li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,126 @@
+body{
+	font-family: 'Microsoft Yahei';
+}
+
+.main_wrap{
+	/* 将四边定位都设置为0 那么屏幕多大 这个容器就多大
+	微信用固定定位会出现bug有时候点不了按钮 所以用绝对定位 */
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: gold;
+}
+
+.header{
+	height: 50px;
+	background-color: #000;
+	position: relative;
+}
+
+.header .logo{
+	width: 75px;
+	height: 30px;
+	display: block;
+	margin: 10px auto 0;
+}
+
+.header .logo img{
+	width: 100%;
+}
+
+.header .search{
+	position: absolute;
+	right: 15px;
+	top: 12px;
+	width: 27px;
+	height: 27px;
+	background: url(../images/icons1.png) 0px 0px no-repeat;
+	background-size: 60px 840px;
+}
+
+.center_wrap{
+	/* 相对于上面的容器定位 上下留50px */
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50px;
+	bottom: 50px;
+	background-color: #efefef;
+	/* x方向不出现滚动条 y出现滚动条 */
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.menu{
+	height: 173px;
+	background-color: #fff;
+	margin-top: 10px;
+	padding-top: 12px;
+}
+
+.menu li{
+	width: 25%;
+	height: 81px;
+	float: left;
+
+}
+
+.menu li a{
+	display: block;
+	width: 56px;
+	height: 56px;
+	/* 要将图缩小一倍 将容器给大一点 因为不同的屏幕会有些区别 有可能裁切图标 */
+	background: url(../images/icons1.png) 0px -62px no-repeat;
+	background-size: 60px 840px;
+	margin: 0 auto;
+}
+
+.menu li h2{
+	height: 25px;
+	font: bold 13px/25px 'Microsoft Yahei';
+	text-align: center;
+	color: #666;
+}
+
+.menu li:nth-child(2) a{
+	background-position: 0px -123px;
+}
+
+.menu li:nth-child(3) a{
+	background-position: 0px -181px;
+}
+
+.menu li:nth-child(4) a{
+	background-position: 0px -241px;
+}
+
+.menu li:nth-child(5) a{
+	background-position: 0px -301px;
+}
+
+.menu li:nth-child(6) a{
+	background-position: 0px -361px;
+}
+
+.menu li:nth-child(7) a{
+	background-position: 0px -421px;
+}
+
+.menu li:nth-child(8) a{
+	background-position: 0px -481px;
+}
+
+.footer{
+	position: absolute;
+	background-color: #fff;
+	width: 100%;
+	height: 50px;
+	left: 0;
+	bottom: 0;
+}
+
+.slide img{
+	width: 100%;
+}

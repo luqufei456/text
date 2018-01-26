@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除浮动</title>
+	<style type="text/css">
+		.con,.con2{
+			width: 300px;
+			border: 1px solid #000;
+			margin: 100px auto 0;
+			font-size: 0;
+			/*height: 300px;
+			可以看到没有父级高度之后，浮动的子元素
+			无法撑开父元素*/
+		}
+		/*第一种方法 和定位有冲突
+		.con2{
+			overflow: hidden;
+		}
+		*/
+		.con a{
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+			background-color: gold;
+			font-size: 16px;
+			margin: 10px;
+			text-align: center;
+			line-height: 50px;
+			text-decoration: none;
+		}
+		.con2 a{
+			width: 50px;
+			height: 50px;
+			background-color: gold;
+			font-size: 16px;
+			margin: 10px;
+			text-align: center;
+			line-height: 50px;
+			text-decoration: none;
+			float: left;
+		}
+		/*.clearfix:before{
+			content: "";
+			display: table;
+		}
+		.clearfix:after{
+			content: "";
+			第三种方法 table 为了和margin一起用
+			相当于在后面加了一个空的字符串
+			设置成clear:both
+			display: table;
+			clear: both;
+		} 合并成一个 又能防止margin-top塌陷，又能清除浮动*/
+		.clearfix:before,.clearfix:after{
+			content: "";
+			display: table;
+		}
+		.clearfix:after{
+			clear: both;
+		}
+		/* 兼容ie的方法，因为ie有的版本不支持after*/
+		.clearfix{
+			zoom: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<a href="">1</a>
+		<a href="">2</a>
+		<a href="">3</a>
+		<a href="">4</a>
+		<a href="">5</a>
+		<a href="">6</a>
+		<a href="">7</a>
+		<a href="">8</a>
+		<a href="">9</a>
+		<a href="">10</a>
+		<a href="">11</a>
+		<a href="">12</a>
+	</div>
+	<div class="con2 clearfix">
+		<a href="">1</a>
+		<a href="">2</a>
+		<a href="">3</a>
+		<a href="">4</a>
+		<a href="">5</a>
+		<a href="">6</a>
+		<a href="">7</a>
+		<a href="">8</a>
+		<a href="">9</a>
+		<a href="">10</a>
+		<a href="">11</a>
+		<a href="">12</a>
+		<!--第二种方法 清除2边的浮动
+		会增加无用的结构 不推荐
+		<div style="clear: both"></div>
+		-->
+	</div>
+</body>
+</html>
