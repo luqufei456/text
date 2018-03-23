@@ -13,16 +13,16 @@ with open('calls.csv', 'r') as f:
 infors = {}
 for temp in calls:
     if temp[0] in infors:
-        infors[temp[0]]+=int(temp[3])
+        infors[temp[0]] += int(temp[3])
     else:
-        infors[temp[0]]=int(temp[3])
+        infors[temp[0]] = int(temp[3])
     if temp[1] in infors:
-        infors[temp[1]]+=int(temp[3])
+        infors[temp[1]] += int(temp[3])
     else:
-        infors[temp[1]]=int(temp[3])
-lists = sorted(infors.items(),key=lambda x:x[1],reverse=True)
+        infors[temp[1]] = int(temp[3])
+lists = sorted(infors.items(), key=lambda x: x[1], reverse=True)
 a = lists[0]
-print("{} spent the longest time, {} seconds, on the phone duringSeptember 2016.".format(a[0],a[1]))
+print("{} spent the longest time, {} seconds, on the phone duringSeptember 2016.".format(a[0], a[1]))
 """
 任务2: 哪个电话号码的通话总时间最长? 不要忘记，用于接听电话的时间也是通话时间的一部分。
 输出信息:

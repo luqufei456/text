@@ -12,9 +12,9 @@ with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 Tui_xiao_nums = []
-Bei_bo=[]
-Bei_fa=[]
-Fa_txt=[]
+Bei_bo = []
+Bei_fa = []
+Fa_txt = []
 for temp in calls:
     if temp[1] not in Bei_bo:
         Bei_bo.append(temp[1])
@@ -28,9 +28,13 @@ for temp in calls:
     if temp[0] not in Bei_fa and temp[0] not in Bei_bo and temp[0] not in Fa_txt and temp[0] not in Tui_xiao_nums:
         Tui_xiao_nums.append(temp[0])
 Tui_xiao_nums=sorted(Tui_xiao_nums)
+
+
 def list_num(list):
     for num in list:
         print(num)
+
+
 print("These numbers could be telemarketers: ")
 list_num(Tui_xiao_nums)
 """

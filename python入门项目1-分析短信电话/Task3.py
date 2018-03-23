@@ -25,15 +25,16 @@ telnum = set(telnums)
 tell=list(telnum)
 tell=sorted(tell)
 
+
 def tel(list_tel):
-    for temp in list_tel:
-        print(temp)
+    for temp1 in list_tel:
+        print(temp1)
 print("The numbers called by people in Bangalore have codes:")
 tel(tell)
 #2
 num080 = []
 for temp in telnums:
-    if temp=="(080)":
+    if temp == "(080)":
         num080.append(temp)
 Bai_fen_bi = len(num080)/len(telnums)
 Bai_fen_bi=round(Bai_fen_bi,4)

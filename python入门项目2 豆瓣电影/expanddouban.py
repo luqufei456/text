@@ -6,6 +6,7 @@ url: the douban page we will get html from
 loadmore: whether or not click load more on the bottom 
 waittime: seconds the broswer will wait after intial load and 
 """
+
 def getHtml(url, loadmore = False, waittime = 2):
     browser = webdriver.Chrome('chromedriver')
     browser.get(url)

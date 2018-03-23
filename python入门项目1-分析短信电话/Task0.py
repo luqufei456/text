@@ -12,8 +12,8 @@ with open('calls.csv', 'r') as f:
     calls = list(reader)
 a = texts[0]
 b = calls[-1]
-print("First record of texts, {} texts {} at time {}".format(a[0],a[1],a[2]))
-print("Last record of calls, {} calls {} at time {}, lasting {} seconds".format(b[0],b[1],b[2],b[3]))
+print("First record of texts, {} texts {} at time {}".format(a[0], a[1], a[2]))
+print("Last record of calls, {} calls {} at time {}, lasting {} seconds".format(b[0], b[1], b[2], b[3]))
 """
 任务0:
 短信记录的第一条记录是什么？通话记录最后一条记录是什么？
