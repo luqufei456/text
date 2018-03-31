@@ -14,10 +14,10 @@ class Test(object):
 
 t = Test()
 
-print("-"*50)
 
 t.num = 200  #相当于调用了t.setNum(200)
 print(t.num)  #相当于调用了t.getNum()
+print("-"*50)
 # 注意点
 # t.num 到底是调用getNum()还是setNum(),要根据实际场景来判断
 # 1. 如果是给t.num赋值 那么一定调用setNum()
@@ -30,13 +30,13 @@ class Test(object):
     def __init__(self):
         self.__num = 100
 
-    @property #默认为gettet方法 property下面的方法名叫什么 外面就用什么
+    @property  # 默认为gettet方法 property下面的方法名叫什么 外面就用什么
     def num(self):
         print("-----getter-----")
         return self.__num
 
-    @num.setter #根据上面的方法名来命名
-    def num(self,newNum):
+    @num.setter  # 根据上面的方法名来命名 这里是表示可写
+    def num(self, newNum):
         print("-----setter-----")
         self.__num = newNum
 
@@ -45,3 +45,6 @@ t = Test()
 t.num = 200  #相当于调用了t.setNum(200)
 
 print(t.num)  #相当于调用了t.getNum()
+
+# @property 表示只读，同时有@property和@x.setter表示可读可写
+# 同时有@property和@x.setter和@x.deleter表示可读可写可删除。
